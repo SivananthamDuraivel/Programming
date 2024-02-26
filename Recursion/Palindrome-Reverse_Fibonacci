@@ -1,0 +1,73 @@
+/******************************************************************************
+Palindrome
+
+*******************************************************************************/
+
+public class Main
+{
+    public static void rev(int i,int j, char s[])
+    {
+        if(i>=j)
+        {
+            System.out.println("ss");
+            return ;
+        }
+        if(s[i]!=s[j])
+        {
+            System.out.println("No");
+            return;
+        }
+        rev(i+1,j-1,s);
+        
+    }
+	public static void main(String[] args) {
+	    char s[]={'m','a','d','a','m'};
+		rev(0,4,s);
+	}
+}
+/******************************************************************************
+
+                        REVERSE
+
+*******************************************************************************/
+
+public class Main
+{
+    public static void rev(int i,int j, char s[])
+    {
+        if(i>=j)
+        {
+            System.out.println(s);
+            return ;
+        }
+        char t=s[i];
+        s[i]=s[j];
+        s[j]=t;
+        
+        rev(i+1,j-1,s);
+        
+    }
+	public static void main(String[] args) {
+	    char s[]={'s','i','v','a','n'};
+		rev(0,5-1,s);
+	}
+}
+/******************************************************************************
+
+                           FIBONACCI
+
+*******************************************************************************/
+
+public class Main
+{
+    public static int fibonacci(int n)
+    {
+        if(n<=1)
+            return n;
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
+	public static void main(String[] args) {
+		System.out.println(fibonacci(4));
+	}
+}
+
